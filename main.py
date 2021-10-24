@@ -8,7 +8,8 @@ import pybadges
 title={
         "topcoder":"TopCoder",
         "codechef":"Codechef",
-        "codeforces":"Codeforces"
+        "codeforces":"Codeforces",
+        "atcoder":"Atcoder"
         }
 
 app=FastAPI()
@@ -102,7 +103,7 @@ def get_codechef(user_id:str):
     if len(rating)==0:
         return [0,color,0]
 
-    rating = int(rating[0].text)
+    rating = int(rating[0].text())
 
     if rating <= 1399:
         color = '#666666'
